@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux'
 
 const Header = props => {
   return (
@@ -8,6 +9,7 @@ const Header = props => {
       </figure>
       <h2>{props.car.name}</h2>
       <p>Amount: ${props.car.price}</p>
+      <p>Total for this car will be: ${props.car.price + props.additionalPrice}</p>
     </>
   );
 };
